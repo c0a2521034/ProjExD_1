@@ -21,18 +21,21 @@ def main():
         for event in pg.event.get():
             if event.type == pg.QUIT: return
 
+
+        x = 0
+        y = 0
         key_lst = pg.key.get_pressed() #練習10.3全キーの押下状態の取得
         if key_lst[pg.K_UP]:#練習10上下左右の移動
-            k3_rct.move_ip(0,-1)
+            y = -1
         if key_lst[pg.K_DOWN]:
-            k3_rct.move_ip(0,+1)
+            y = +1
         if key_lst[pg.K_LEFT]:
-            k3_rct.move_ip(-1,0)
+            x = -1
         if key_lst[pg.K_RIGHT]:
-            k3_rct.move_ip(+2,0)
+            x = +2
+        k3_rct.move_ip(x-1,y)
 
-
-        k3_rct.move_ip(-1,0)
+        
         x = tmr%3200 #練習5 練習9
         screen.blit(bg_img, [-x, 0]) #練習2
         screen.blit(bgR_img, [-x + 1600, 0])
