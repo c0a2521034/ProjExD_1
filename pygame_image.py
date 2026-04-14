@@ -29,7 +29,7 @@ def main():
         if key_lst[pg.K_LEFT]:
             k3_rct.move_ip(-1,0)
         if key_lst[pg.K_RIGHT]:
-            k3_rct.move_ip(+1,0)
+            k3_rct.move_ip(+2,0)
 
 
         k3_rct.move_ip(-1,0)
